@@ -6,7 +6,7 @@ extends Sprite2D
 func _physics_process(delta: float) -> void:
 	if(position.x <= -texture.get_width()):
 		if tekrarlar:
-			position.x = texture.get_width() - 1
+			position.x = texture.get_width()
 		else:
 			queue_free()
 	position.x -= hareket_hizi

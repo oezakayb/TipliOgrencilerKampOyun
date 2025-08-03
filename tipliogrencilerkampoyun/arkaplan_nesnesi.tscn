@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dpcsocepqk76g"]
 
 [ext_resource type="Texture2D" uid="uid://dmpxfhhemhlyd" path="res://şehir/PNG/City1/Bright/wheels&hydrant.png" id="1_iitxs"]
-[ext_resource type="Script" path="res://arkaplan.gd" id="1_rllct"]
+[ext_resource type="Script" uid="uid://b2xi2skkue30n" path="res://arkaplan.gd" id="1_rllct"]
 
 [node name="arkaplan_nesnesi" type="Sprite2D"]
 z_index = -1
