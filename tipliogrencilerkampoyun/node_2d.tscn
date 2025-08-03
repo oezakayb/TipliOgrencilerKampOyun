@@ -1,18 +1,19 @@
-[gd_scene load_steps=15 format=3 uid="uid://bk8a0ost44qic"]
+[gd_scene load_steps=16 format=3 uid="uid://bk8a0ost44qic"]
 
 [ext_resource type="Texture2D" uid="uid://t1164cecu2sa" path="res://şehir/PNG/City2/Bright/back.png" id="1_q6r6c"]
-[ext_resource type="PackedScene" path="res://yol.tscn" id="1_wtcfe"]
+[ext_resource type="PackedScene" uid="uid://d0ckhegweol5t" path="res://yol.tscn" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://db3c8p041drcr" path="res://şehir/PNG/City2/Bright/minishop&callbox.png" id="2_0hol4"]
-[ext_resource type="Script" path="res://arkaplan.gd" id="2_epypp"]
+[ext_resource type="Script" uid="uid://b2xi2skkue30n" path="res://arkaplan.gd" id="2_epypp"]
 [ext_resource type="Texture2D" uid="uid://bon6xclmnjm0y" path="res://şehir/PNG/City2/Bright/Sky.png" id="5_kdubu"]
 [ext_resource type="Texture2D" uid="uid://co70haquhbdye" path="res://şehir/PNG/City1/Pale/wall1.png" id="6_kdubu"]
-[ext_resource type="Script" path="res://obje.gd" id="6_rj586"]
+[ext_resource type="Script" uid="uid://bmxeuwm3abaos" path="res://obje.gd" id="6_rj586"]
 [ext_resource type="Texture2D" uid="uid://dmpxfhhemhlyd" path="res://şehir/PNG/City1/Bright/wheels&hydrant.png" id="7_d21ai"]
 [ext_resource type="Texture2D" uid="uid://cn40vnnwxv6fw" path="res://şehir/PNG/City3/Bright/Map_Clean.png" id="9_4d7sh"]
 [ext_resource type="Texture2D" uid="uid://ceb3trup5mb2t" path="res://şehir/PNG/City3/Bright/StopSign_Clean.png" id="11_nr8wp"]
 [ext_resource type="Texture2D" uid="uid://ctf0jm7vn5mcu" path="res://şehir/PNG/City3/Bright/VendingMachine_Clean.png" id="12_d2bti"]
 [ext_resource type="PackedScene" uid="uid://d4kms84vxhcp8" path="res://character.tscn" id="13_0h7mo"]
 [ext_resource type="Texture2D" uid="uid://bye1dj5bmx8f0" path="res://şehir/PNG/City3/Bright/Clock_Clean.png" id="13_ta5nu"]
+[ext_resource type="PackedScene" uid="uid://dsddhaiul7s8c" path="res://label.tscn" id="14_nr8wp"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0h7mo"]
 
@@ -80,9 +81,14 @@ position = Vector2(-352, 168)
 scale = Vector2(0.8, 0.8)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(1, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-322, 479)
 shape = SubResource("WorldBoundaryShape2D_0h7mo")
+
+[node name="Control" parent="." instance=ExtResource("14_nr8wp")]
+offset_right = 0.0
+offset_bottom = 0.0
 
 [connection signal="timeout" from="Cevre/Spawn" to="Cevre/Spawn" method="zaman_dolunca"]
