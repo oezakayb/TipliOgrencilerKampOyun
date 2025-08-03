@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cdi6q2uslb457"]
+[gd_scene load_steps=10 format=3 uid="uid://5xrlya8ctmxb"]
 
 [ext_resource type="Texture2D" uid="uid://dbkiinflyae5v" path="res://pikachu.png" id="1_8jmog"]
 
@@ -62,4 +62,5 @@ animations = [{
 [node name="CharacterBody2D" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_gfdik")
 autoplay = "default"
+frame_progress = 0.498175
 flip_h = true
