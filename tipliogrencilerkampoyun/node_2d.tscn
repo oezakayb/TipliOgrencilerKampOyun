@@ -1,7 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://bk8a0ost44qic"]
+[gd_scene load_steps=14 format=3 uid="uid://bk8a0ost44qic"]
 
 [ext_resource type="Texture2D" uid="uid://t1164cecu2sa" path="res://şehir/PNG/City2/Bright/back.png" id="1_q6r6c"]
-[ext_resource type="PackedScene" uid="uid://d0ckhegweol5t" path="res://yol.tscn" id="1_wtcfe"]
+[ext_resource type="PackedScene" path="res://yol.tscn" id="1_wtcfe"]
 [ext_resource type="Script" uid="uid://b2xi2skkue30n" path="res://arkaplan.gd" id="2_epypp"]
 [ext_resource type="Texture2D" uid="uid://b5fm8rmfesfrj" path="res://şehir/PNG/City3/Bright/map_clean_resized.png" id="2_rj586"]
 [ext_resource type="Texture2D" uid="uid://lak6m6vl6iv4" path="res://şehir/PNG/City3/Bright/saat.png" id="3_x0ka3"]
@@ -10,7 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://co70haquhbdye" path="res://şehir/PNG/City1/Pale/wall1.png" id="6_kdubu"]
 [ext_resource type="Texture2D" uid="uid://bnkhryu24ja4l" path="res://şehir/PNG/City2/Bright/vending resized.png" id="6_nr8wp"]
 [ext_resource type="Script" uid="uid://bmxeuwm3abaos" path="res://obje.gd" id="6_rj586"]
-[ext_resource type="PackedScene" uid="uid://d4kms84vxhcp8" path="res://character.tscn" id="13_0h7mo"]
+[ext_resource type="PackedScene" uid="uid://o5hwu3cia1p6" path="res://bgm.tscn" id="12_x0ka3"]
+[ext_resource type="PackedScene" path="res://character.tscn" id="13_0h7mo"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0h7mo"]
 
@@ -82,5 +83,8 @@ scale = Vector2(0.8, 0.8)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-322, 479)
 shape = SubResource("WorldBoundaryShape2D_0h7mo")
+
+[node name="BGM" parent="." instance=ExtResource("12_x0ka3")]
+parameters/looping = false
 
 [connection signal="timeout" from="Cevre/Spawn" to="Cevre/Spawn" method="zaman_dolunca"]

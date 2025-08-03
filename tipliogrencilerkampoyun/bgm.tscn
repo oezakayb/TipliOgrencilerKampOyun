@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://o5hwu3cia1p6"]
+
+[ext_resource type="AudioStream" uid="uid://ce46h7c8k2qvl" path="res://muzik/Bella Ciao-8 Bit Version.ogg" id="1_l7bcd"]
+
+[node name="BGM" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_l7bcd")
+autoplay = true
